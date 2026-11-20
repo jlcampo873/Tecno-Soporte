@@ -1,0 +1,544 @@
+/* =======================================
+   MÓDULO GENERAL
+======================================= */
+
+.empleado-module {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto 40px;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+
+/* =======================================
+   ENCABEZADO DEL MÓDULO
+======================================= */
+
+.module-header {
+  margin-bottom: 24px;
+  padding: 28px;
+  border-radius: 18px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+}
+
+.module-tag {
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background-color: #dbeafe;
+  color: #1d4ed8;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.module-header h2 {
+  margin: 0;
+  font-size: 34px;
+  color: #0f172a;
+}
+
+.module-header p {
+  margin: 8px 0 0;
+  color: #64748b;
+  font-size: 16px;
+}
+
+
+/* =======================================
+   TARJETAS
+======================================= */
+
+.card {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 26px;
+  margin-bottom: 25px;
+  border-radius: 18px;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.07);
+}
+
+.card h3 {
+  margin: 0 0 20px;
+  color: #0f172a;
+  font-size: 24px;
+  text-align: center;
+}
+
+
+/* =======================================
+   FORMULARIO
+======================================= */
+
+.empleado-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group.full {
+  grid-column: 1 / -1;
+}
+
+.form-group label {
+  margin-bottom: 7px;
+  color: #334155;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 13px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  background-color: #f8fafc;
+  color: #0f172a;
+  font-size: 15px;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  background-color: #ffffff;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.15);
+}
+
+
+/* =======================================
+   BOTONES DEL FORMULARIO
+======================================= */
+
+.form-actions {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 12px;
+  margin-top: 6px;
+}
+
+.form-actions button {
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.form-actions button:hover {
+  transform: translateY(-1px);
+}
+
+.btn-primary {
+  padding: 12px 22px;
+  border-radius: 12px;
+  background-color: #2563eb;
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: #1d4ed8;
+  box-shadow: 0 6px 15px rgba(37, 99, 235, 0.25);
+}
+
+.btn-secondary {
+  padding: 12px 22px;
+  border-radius: 12px;
+  background-color: #e2e8f0;
+  color: #334155;
+}
+
+.btn-secondary:hover {
+  background-color: #cbd5e1;
+}
+
+
+/* =======================================
+   ENCABEZADO DE LA TABLA
+======================================= */
+
+.table-title {
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.table-title p {
+  margin: 0;
+  color: #64748b;
+}
+
+
+/* =======================================
+   CONTENEDOR TABLA USUARIOS
+======================================= */
+
+.usuario-table-container {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  box-sizing: border-box;
+  padding-bottom: 8px;
+}
+
+
+/* =======================================
+   TABLA USUARIOS
+======================================= */
+
+.usuario-table-container .empleado-table {
+  width: max-content;
+  min-width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+/* =======================================
+   ENCABEZADO
+======================================= */
+
+.usuario-table-container .empleado-table thead {
+  background-color: #1e293b;
+}
+
+.usuario-table-container .empleado-table th {
+  padding: 15px;
+  color: #ffffff;
+  text-align: left;
+  white-space: nowrap;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+
+/* =======================================
+   CELDAS
+======================================= */
+
+.usuario-table-container .empleado-table td {
+  padding: 15px;
+  color: #334155;
+  border-bottom: 1px solid #e2e8f0;
+  background-color: #ffffff;
+  white-space: nowrap;
+}
+
+
+/* =======================================
+   COLUMNAS
+======================================= */
+
+/* Usuario */
+.usuario-table-container .empleado-table th:nth-child(1),
+.usuario-table-container .empleado-table td:nth-child(1) {
+  min-width: 250px;
+}
+
+/* Correo */
+.usuario-table-container .empleado-table th:nth-child(2),
+.usuario-table-container .empleado-table td:nth-child(2) {
+  min-width: 220px;
+}
+
+/* Rol */
+.usuario-table-container .empleado-table th:nth-child(3),
+.usuario-table-container .empleado-table td:nth-child(3) {
+  min-width: 110px;
+}
+
+/* Estado */
+.usuario-table-container .empleado-table th:nth-child(4),
+.usuario-table-container .empleado-table td:nth-child(4) {
+  min-width: 110px;
+}
+
+/* Acciones */
+.usuario-table-container .empleado-table th:nth-child(5),
+.usuario-table-container .empleado-table td:nth-child(5) {
+  min-width: 130px;
+  width: 130px;
+}
+
+
+/* =======================================
+   ACCIONES
+======================================= */
+
+.usuario-table-container .empleado-table td:last-child > div {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: max-content;
+}
+
+.usuario-table-container .MuiIconButton-root {
+  flex-shrink: 0;
+}
+
+
+/* =======================================
+   HOVER
+======================================= */
+
+.usuario-table-container .empleado-table tbody tr:hover td {
+  background-color: #f8fafc;
+}
+
+
+/* =======================================
+   ORDEN DE SERVICIO
+======================================= */
+
+.orden-servicio-card {
+  padding: 0;
+  overflow: hidden;
+}
+
+.orden-documento {
+  padding: 32px;
+  background-color: #ffffff;
+  color: #0f172a;
+}
+
+.orden-encabezado {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  padding-bottom: 24px;
+  border-bottom: 3px solid #1e293b;
+}
+
+.orden-encabezado h2 {
+  margin: 0;
+  font-size: 32px;
+}
+
+.orden-encabezado p {
+  margin: 6px 0 0;
+  color: #64748b;
+}
+
+.orden-numero {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+}
+
+.orden-numero strong {
+  font-size: 18px;
+}
+
+.orden-numero span {
+  font-size: 28px;
+  font-weight: 800;
+  color: #2563eb;
+}
+
+.orden-seccion {
+  margin-top: 28px;
+}
+
+.orden-seccion h3 {
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #cbd5e1;
+  text-align: left;
+  font-size: 20px;
+}
+
+.orden-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px 24px;
+}
+
+.orden-grid div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.orden-grid span {
+  color: #475569;
+}
+
+.orden-table {
+  min-width: 1200px;
+}
+
+.orden-total {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 24px;
+  margin-top: 24px;
+  padding: 18px;
+  border-radius: 12px;
+  background-color: #e2e8f0;
+  font-size: 20px;
+}
+
+.orden-total strong {
+  font-size: 26px;
+  color: #1d4ed8;
+}
+
+.orden-firmas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  margin-top: 70px;
+}
+
+.orden-firmas > div {
+  text-align: center;
+}
+
+.firma-linea {
+  border-top: 1px solid #0f172a;
+  margin-bottom: 10px;
+}
+
+.orden-acciones {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 30px;
+}
+
+
+/* =======================================
+   RESPONSIVE
+======================================= */
+
+@media (max-width: 768px) {
+
+  .empleado-module {
+    padding: 0 10px;
+  }
+
+  .module-header {
+    padding: 22px;
+  }
+
+  .module-header h2 {
+    font-size: 28px;
+  }
+
+  .module-header p {
+    font-size: 14px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .empleado-form {
+    grid-template-columns: 1fr;
+  }
+
+  .form-actions {
+    grid-column: 1;
+    flex-direction: column;
+  }
+
+  .form-actions button {
+    width: 100%;
+  }
+
+  /*
+   * La tabla conserva un ancho mínimo
+   * para evitar que el contenido se comprima.
+   */
+
+  .empleado-table {
+    min-width: 850px;
+  }
+
+  /*
+   * La columna de acciones continúa
+   * visible al desplazarse.
+   */
+
+  .empleado-table th:last-child,
+  .empleado-table td:last-child {
+    min-width: 120px;
+    width: 120px;
+  }
+
+
+  /* Orden de servicio */
+
+  .orden-encabezado {
+    flex-direction: column;
+  }
+
+  .orden-numero {
+    align-items: flex-start;
+  }
+
+  .orden-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .orden-firmas {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+}
+
+
+/* =======================================
+   IMPRESIÓN
+======================================= */
+
+@media print {
+
+  body * {
+    visibility: hidden;
+  }
+
+  .orden-documento,
+  .orden-documento * {
+    visibility: visible;
+  }
+
+  .orden-documento {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .orden-acciones {
+    display: none;
+  }
+
+  .orden-table {
+    min-width: 0;
+  }
+
+  .table-container {
+    overflow: visible;
+  }
+}
